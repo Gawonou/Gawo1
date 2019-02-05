@@ -1,32 +1,5 @@
 
-/**
- * I N F 2 1 2 0 - ETE2018 - Groupe 20
- *
- * * --------------------------------------------------------------
- * 
- * Travail fait en Žquipe
- * 
- * ƒquipier 1
- * ----------
- * 
- * PrŽnom  NOM  	:  Ussel SABBAT
- * 
- * Code permanent   : SABU27107001
- *  
- * Email 			: ussels@hotmail.com
- * 
- * 
- * 
- * 
- * ƒquipier 2
- * ----------
- * 
- * PrŽnom NOM   	: Koukou Gawonou N'TSOUAGLO
- * 
- * Code permanent 2 : NTSK11088202
- *  
- * Email 2			: ck391056@ens.uqam.ca
- * 
+/*
  * --------------------------------------------------------------
  * 
  * Construction du fichier HTML de sortie
