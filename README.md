@@ -30,10 +30,10 @@
    		 unicode1
    		 unicode2 
    
-   TableTraduction : reprŽsente un Array du Kanas  (Destiné a contenir tout les unicodes des kanas)
+   TableTraduction : représente un Array du Kanas  (Destiné a contenir tout les unicodes des kanas)
   
  
-  Roomaji	: reprŽsente une stucture qui contient les syllabes lu dans le texte roomaji
+  Roomaji	: représente une stucture qui contient les syllabes lu dans le texte roomaji
  			  ou l'on retrouve
  
  			 kanas : le texte lu
