@@ -2,7 +2,7 @@
 # Construction du fichier HTML de sortie
   
  
-  Dans ce travail, nous lirons un fichier (entree) texte représentant un texte roomaji (pronociation syllabique) (lecture de gauche ˆ droite et de haut en bas)
+  Dans ce travail, nous lirons un fichier (entree) texte représentant un texte roomaji (pronociation syllabique) (lecture de gauche à droite et de haut en bas)
   
   Pour produire un autre fichier (sortie)  représentant sa coresponance en caractère japonais. (lecture droite à gauche et de haut en bas )
   
@@ -13,7 +13,7 @@
   
  ### Chargement de la table de traduction
 
- ### Lecture du fichier externe (dans le meme temps, il va creer le texte roomaji avec les donnŽes trouvŽ)
+ ### Lecture du fichier externe (dans le meme temps, il va creer le texte roomaji avec les données trouvé)
   
  ### ƒcrite du fichier externe correspondant a un fichier HTML
   
@@ -54,11 +54,11 @@
   		2. Une fois le programme terminer, rendez vous dans le repertoire par defaut de votre ordinateur
   		   et vous trouvez le fichier de sortie  avec le résultat en (Hiragana) caractère japonais (le nom du fichier a été spécifié par       l'usager).
   
-  		 ## Informations supplŽmentaires ....
+  		  Informations supplémentaires ....
   
   		Si le programme ne trouve pas le fichier entré par l'usager, un message d'erreur s'affichera et
   		  et dans ce cas, le fichier  sera vide.
-  		Il est très important que le fichier  respecte les dŽfinitions syntaxiques 
+  		Il est très important que le fichier  respecte les définitions syntaxiques 
   		  des syllabes Roomajis pour avoir les rŽsultats désirés.
   		
  
