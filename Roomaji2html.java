@@ -195,7 +195,7 @@ public class Roomaji2html {
 			System.out.println("Erreur d'entree/sortie !");
 		}
 
-		System.out.println("FIN NORMAL DU PROGRAMME DE ECRITURE FICHIER");
+		System.out.println("FIN NORMAL DU PROGRAMME");
 		System.out.println ("Merci de l'utilisation de ce programme");		
 
 	}
