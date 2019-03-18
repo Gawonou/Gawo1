@@ -69,10 +69,10 @@ class Kanas {
 	
 	/**
 	* 
-	* Retourne la reprŽsentation en format HTML des unicodes du Kanas qui ne sont pas Žgale ˆ 0
+	* Retourne la représentation en format HTML des unicodes du Kanas qui ne sont pas égale ˆ 0
 	*	 
 	* @return   "&#" + _unicode1 + ";" "&#" + _unicode2 + ";" 
-	*		     si _unicode est Žgalse a 0, il ne retournera pas la deuxime partie
+	*		     si _unicode est égalse a 0, il ne retournera pas la deuxième partie
 	* 			
 	*/	
 	public String toString() {
@@ -83,7 +83,7 @@ class Kanas {
 			unicode2 = "&#" + this._unicode2 + ";" ;
 		}
 			
-		   // retourne la reprŽsentation des unicodes qui ne sont pas Žgale ˆ 0
+		   // retourne la représentation des unicodes qui ne sont pas égale ˆ 0
 		   return "&#" + this._unicode1 + ";" + unicode2 ;
 		}
 	

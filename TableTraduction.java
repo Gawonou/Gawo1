@@ -10,11 +10,11 @@ public class TableTraduction extends ArrayList <Kanas>{
 	
 	/**
 	* 
-	* Parcours la table de traduction jusqu'à ce qu'il trouve le kanas correspondant à la valeur recherché
+	* Parcours la table de traduction jusqu'‡ ce qu'il trouve le kanas correspondant ‡ la valeur recherché
 	*
 	* @param Valeur de la syllabe recherché
 	* 		 
-	* @return Retourne le Kanas correspondant avec la syllabe recherché
+	* @return Retourne le Kanas correspondant avec la syllabe recherchÈ
 	* 	      s'il ne trouve pas il retournera null
 	* 
 	*/	
@@ -24,13 +24,13 @@ public class TableTraduction extends ArrayList <Kanas>{
 		boolean estDansTable = false;
 		// Parcours la table table de traduction jusqu'à ce qu'il trouve une corresponance ou qu'il arrive a la fin.
 		while(i <= (this.size()-1) && !estDansTable) {
-			// si il trouve la syllabe placé en paramettre dans la table de traduction
+			// si il trouve la syllabe placÈ en paramettre dans la table de traduction
 			if (this.get(i).get_hiragana().compareTo(syllabeChercher) == 0)  {
-				// indique que le syllabe recherché est dans la table
+				// indique que le syllabe recherchÈ est dans la table
 				estDansTable = true;
 				hiraganaChercher = this.get(i);
 			}
-			// prochain élément de la liste
+			// prochain ÈlÈment de la liste
 			i++;
 		}
 		// retourne null s'il ne trouve pas de correspondance
@@ -40,7 +40,7 @@ public class TableTraduction extends ArrayList <Kanas>{
 	
 	/**
 	* Ajoute une definition sous forme de kanas dans la table de traduction
-	* Associe un kanas avec une valeur unicode sous forme numérique
+	* Associe un kanas avec une valeur unicode sous forme numÈrique
 	*
 	* @param str		: valeur de la syllabe kanas
 	* 		 unicode1	: valeur de l'unicode 1 
@@ -53,7 +53,7 @@ public class TableTraduction extends ArrayList <Kanas>{
 
 	/**
 	* Ajoute une definition sous forme de kanas dans la table de traduction
-	* Associe un kanas avec deux valeurs unicodes sous forme numérique
+	* Associe un kanas avec deux valeurs unicodes sous forme numÈrique
 	*
 	* @param str		: valeur de la syllabe kanas
 	* 		 unicode1	: valeur de l'unicode 1 

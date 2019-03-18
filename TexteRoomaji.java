@@ -59,7 +59,7 @@ public class TexteRoomaji  extends ArrayList<Roomaji> {
 		
 		Roomaji r = null;
 		
-		// Parcours du texte a la recherche de la ligne et la colonne spŽcifiŽ dans les parametres
+		// Parcours du texte a la recherche de la ligne et la colonne spécifié dans les parametres
 		while ( i <= this.size() -1)  {
 			if ((this.get(i).get_ligne() == colonneHTML) && (this.get(i).get_numero() == ligneHTML)) {		
 				r = this.get(i);
@@ -111,7 +111,7 @@ public class TexteRoomaji  extends ArrayList<Roomaji> {
 						}
 					}
 					else {
-						// Syllabe non trouvŽ dans dans la table de correspondance
+						// Syllabe non trouvé dans dans la table de correspondance
 						f.write(SYLLABE_INEXISTANT);
 					}
 				}
@@ -126,7 +126,7 @@ public class TexteRoomaji  extends ArrayList<Roomaji> {
 
 	/**
 	* 
-	* Ajoute dans le texte chaque Roomaji (en fonction des rgles syntaxique des Roomaji) trouvŽ dans la ligne placŽ en paramettre
+	* Ajoute dans le texte chaque Roomaji (en fonction des règles syntaxique des Roomaji) trouvé dans la ligne placé en paramettre
 	* 
 	* 
 	* @param String			:  
@@ -181,7 +181,7 @@ public class TexteRoomaji  extends ArrayList<Roomaji> {
 	
 	/**
 	* 
-	* Verifie si le caractere passŽ en parametre se trouve dans une liste donnŽ en parametre
+	* Verifie si le caractere passé en parametre se trouve dans une liste donné en parametre
 	* 
 	* 
 	* @param char 	 : caractere chercher 

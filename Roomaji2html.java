@@ -8,24 +8,24 @@ import java.util.Scanner;
 
 public class Roomaji2html {
 
-	private static final String ENTREE_MSG = "     Veuillez choisir un nom pour le fichier d'ENTRƒE (texte roomaji).";
+	private static final String ENTREE_MSG = "     Veuillez choisir un nom pour le fichier d'ENTREE (texte roomaji).";
 	private static final String SORTIE_MSG = "     Veuillez choisir un nom pour le fichier de SORTIE. il doit se terminer par l'extention .html ";
-	private static final String INVALIDE_MSG = "     Le nom du fichier entrŽ est invalide";
+	private static final String INVALIDE_MSG = "     Le nom du fichier entré est invalide";
 	
 	/**
-	 * Affiche ˆ l'Žcran un message de bienvenue
+	 * Affiche ˆ l'écran un message de bienvenue
 	 * 
 	 * 
 	 */
 	public static void affichePresentation () {
 
-		System.out.println ("Bienvenue dans le traitement et la mise en page de caratre japonais");
+		System.out.println ("Bienvenue dans le traitement et la mise en page de caratère japonais");
 		System.out.println ("");
-		System.out.println ("Ce programme recois un texte Žcrit de gauche ˆ droite et de haut en bas en syllabe roomoji");
-		System.out.println ("pour produire un texte lisible de haut en bas de droite ˆ gauche Žcriture japonaise, des hiragana ");
+		System.out.println ("Ce programme recois un texte écrit de gauche ˆ droite et de haut en bas en syllabe roomoji");
+		System.out.println ("pour produire un texte lisible de haut en bas de droite ˆ gauche écriture japonaise, des hiragana ");
 		System.out.println ("");
 		
-		System.out.println ("          3 ƒTAPES");
+		System.out.println ("          3 ETAPES");
 		System.out.println ("");
 		System.out.println ("    +---- CHARGEMENT de la table de traduction des kanas ");
 		System.out.println ("");
@@ -41,7 +41,7 @@ public class Roomaji2html {
 	* Ecrit l'entete de la page HTML
 	*  
 	*  
-	*  @param FileWriter : Le fichier externe dans lequel Žcrire
+	*  @param FileWriter : Le fichier externe dans lequel écrire
 	*  
 	*  @throws IOException 
 	* 
@@ -61,7 +61,7 @@ public class Roomaji2html {
 	*  Ecrit le pied de la page HTML dans un fichier externe
 	*  
 	*  
-	*  @param FileWriter : Le fichier externe dans lequel Žcrire
+	*  @param FileWriter : Le fichier externe dans lequel écrire
 	*  
 	*  @throws IOException 
 	* 
@@ -78,13 +78,13 @@ public class Roomaji2html {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println(s);
-		System.out.print("     >> Entrer le nom du fichier (au moins un caractre): ");
+		System.out.print("     >> Entrer le nom du fichier (au moins un caractère): ");
 		tempStr = sc.nextLine();
 
 		while (tempStr.length() == 0) {
 			System.out.println(INVALIDE_MSG);
 			System.out.println(s);
-			System.out.print("     >> Entrer le nom du fichier (au moins un caractre): ");
+			System.out.print("     >> Entrer le nom du fichier (au moins un caractère): ");
 			tempStr = sc.nextLine();
 			
 		}
@@ -107,7 +107,7 @@ public class Roomaji2html {
 		String fichierEntree = "";
 		String fichierSortie = "";
 		
-		// DŽbut du programme
+		// Début du programme
 		
 		// Affiche la prŽsentation et les instructions
 		affichePresentation ();
@@ -123,12 +123,12 @@ public class Roomaji2html {
 		tableHiragana.chargementTableHiragana(); 
 		
 		
-		// vŽrification si le chargement c'est bien effectŽ
+		// vérification si le chargement c'est bien effecté
 		if (tableHiragana.size() != 0) {
-			System.out.println("   ... Le chargement de la table a ŽtŽ effectuŽ avec succs. \n");
+			System.out.println("   ... Le chargement de la table a été effectué avec succès. \n");
 		}
 		else {
-			System.out.println("   x   il y a eu un problme lors du chargement de la table. \n");
+			System.out.println("   x   il y a eu un problème lors du chargement de la table. \n");
 			
 		}
 		
@@ -147,17 +147,17 @@ public class Roomaji2html {
 			entree.close();
 			
 		}catch (FileNotFoundException e) {	
-				System.out.println("   LE FICHIER " + fichierEntree  +" N'A PAS ƒTƒ TROUVƒ DANS LE RƒPERTOIRE PAR DƒFAUT !");	
+				System.out.println("   LE FICHIER " + fichierEntree  +" N'A PAS ÉTÉ TROUVÉ DANS LE RÉPERTOIRE PAR DÉFAUT !");	
 		}catch (IOException ioe) {	
 					System.out.println("Erreur d'entree/sortie !");
 		}
 		
 		// vŽrification si la lecture et la construction des roomagis ce sont bien effectŽ
 		if (texteJaponais.size() != 0 ) {
-			System.out.println("   ... Le fichier a ŽtŽ lu avec succs, le texte roomagi a ŽtŽ construit avec succs.\n");
+			System.out.println("   ... Le fichier a ÉtÉ lu avec succès, le texte roomagi a ÉtÉ construit avec succès.\n");
 		}
 		else {
-			System.out.println("   x   un problme est survenu lors de la lecture du fichier et la construction du texte roomaji \n");
+			System.out.println("   x   un problème est survenu lors de la lecture du fichier et la construction du texte roomaji \n");
 		}
 	
 		fichierSortie = entrerNomFichier(SORTIE_MSG);
@@ -170,14 +170,14 @@ public class Roomaji2html {
 			sortie = new FileWriter(fichierSortie); //IOException
 			if (texteJaponais.size() != 0 ) {
 				
-				// ƒcriture dans le fichier externe
+				// écriture dans le fichier externe
 				ecrireEnteteHtml(sortie);
 				texteJaponais.ecrireLigneHtml (tableHiragana, sortie);
 				ecrirePiedPageHtm(sortie);  	
 				
-				System.out.println("   ... Žcriture du fichier a ŽtŽ complŽtŽe avec succs");
+				System.out.println("   ... écriture du fichier a été complètée avec succès");
 				
-				// vŽrifi si la table de traduction est bien chargŽ
+				// vérifi si la table de traduction est bien chargé
 				if (tableHiragana.size() == 0) {
 					System.out.println("       ATTENTION UN PROBLéME EST SURVENU LORS DU CHARGEMENT DE LA TABLE DE TRADUCTION");
 					System.out.println("       L'AFFICHAGE DES CARACTéRES JAPONAIS SONT COROMPU .\n");
@@ -187,7 +187,7 @@ public class Roomaji2html {
 				}
 			}
 			else{
-				System.out.println("   x   Aucune donnŽe n'a ŽtŽ trouvŽ. \n");
+				System.out.println("   x   Aucune donnée n'a été trouvé. \n");
 			}
 			
 			sortie.close();
